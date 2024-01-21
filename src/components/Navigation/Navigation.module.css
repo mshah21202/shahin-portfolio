@@ -1,0 +1,16 @@
+.navigation {
+    height: 100%;
+    color: var(--on-background);
+}
+
+.navigation .indicator {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 20px;
+    background-color: var(--on-background);
+}
+
+.navigation .link {
+    height: 4vh;
+    line-height: 4vh;
+}

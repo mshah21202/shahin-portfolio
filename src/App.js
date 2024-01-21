@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+import React, { useContext } from 'react';
+import { ThemeContext } from './theme/ThemeProvider';
+import Row from './components/Layout/Row/Row';
+import Sidebar from './components/Sidebar/Sidebar';
+import Info from './components/Info/Info';
 
 function App() {
+
+  const { toggleTheme } = useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${styles.main}`}>
+      <Row>
+        <Sidebar />
+        <Info />
+      </Row>
     </div>
   );
 }
