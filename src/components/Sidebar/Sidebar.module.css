@@ -1,6 +1,13 @@
 .sidebar {
-    width: 30%;
+    position: fixed;
+    top: 0;
     height: 90vh;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.sidebar-wrapper {
+    position: relative;
+    width: 30%;
+    height: 100vh;
 }

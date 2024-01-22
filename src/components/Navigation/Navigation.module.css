@@ -1,5 +1,8 @@
 .navigation {
+    position: relative;
     height: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     color: var(--on-background);
 }
 
@@ -10,7 +13,24 @@
     background-color: var(--on-background);
 }
 
+.indicator.active {
+    background-color: var(--primary-container);
+}
+
 .navigation .link {
     height: 4vh;
     line-height: 4vh;
+}
+
+.progress {
+    position: absolute;
+    height: 95%;
+    width: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: var(--on-background);
+}
+
+.progress.active {
+    background-color: var(--primary-container);
 }

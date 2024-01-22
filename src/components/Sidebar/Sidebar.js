@@ -6,11 +6,13 @@ import {MainAxisAlignment} from '../Layout/Layout.js'
 
 const Sidebar = () => {
     return (
-        <div className={`${styles.sidebar}`}>
-            <Column mainAxisAlignment={MainAxisAlignment.center} expanded={true}>
-                <Personal />
-                <Navigation items={["About", "Experience", "Resume", "Services", "Contact"]} />
-            </Column>
+        <div className={`${styles['sidebar-wrapper']}`}>
+            <div className={`${styles.sidebar}`}>
+                <Column mainAxisAlignment={MainAxisAlignment.center} expanded={true}>
+                    <Personal />
+                    <Navigation items={["About", "Experience", "Resume", "Services", "Contact"]} />
+                </Column>
+            </div>
         </div>
     );
 }
