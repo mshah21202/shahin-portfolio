@@ -7,9 +7,11 @@
 }
 
 .navigation .indicator {
+    transition: all 0.3s ease;
     width: 4vh;
     height: 4vh;
     border-radius: 20px;
+    z-index: 1;
     background-color: var(--on-background);
 }
 
@@ -33,4 +35,7 @@
 
 .progress.active {
     background-color: var(--primary-container);
+    width: 10px;
+    transform-origin: 0% 0%;
+    transition: all 0.3s ease
 }
