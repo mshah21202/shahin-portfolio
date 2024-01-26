@@ -1,5 +1,5 @@
 import styles from './Navigation.module.css'
-import infoStyles from '../Info/Info.module.css'
+import infoStyles from '../Content/Content.module.css'
 import Column from '../Layout/Column/Column'
 import typography from '../../theme/typography.module.css'
 import Row from '../Layout/Row/Row'
@@ -66,7 +66,7 @@ const Navigation = ({items}) => {
     const onScroll = () => {
         // Get sections element
         var sectionsDistance = [];
-        var sections = document.querySelectorAll(`div.${infoStyles.info} > div[id]`)
+        var sections = document.querySelectorAll(`div.${infoStyles.content} > div[id]`)
 
         sections.forEach((section, index) => {
             sectionsDistance.push(getElemDistance(section) - 150);

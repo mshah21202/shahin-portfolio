@@ -14,6 +14,16 @@ root.render(
   </React.StrictMode>
 );
 
+var css = document.createElement("link");
+css.rel = 'stylesheet';
+css.href = "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+
+var icons = document.createElement("link");
+icons.rel = 'stylesheet';
+icons.href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined";
+
+document.head.appendChild(css);
+document.head.appendChild(icons);
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

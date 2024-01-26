@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from './theme/ThemeProvider';
 import Row from './components/Layout/Row/Row';
 import Sidebar from './components/Sidebar/Sidebar';
-import Info from './components/Info/Info';
+import Content from './components/Content/Content';
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
     <div className={`${styles.main}`}>
       <Row>
         <Sidebar />
-        <Info />
+        <Content />
       </Row>
     </div>
   );

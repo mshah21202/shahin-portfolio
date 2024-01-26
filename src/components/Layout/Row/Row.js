@@ -4,6 +4,7 @@ const Row = ({
   children,
   mainAxisAlignment,
   crossAxisAlignment,
+  gap = 0,
   expanded = false,
   stretch = false
 }) => {
@@ -16,6 +17,8 @@ const Row = ({
       } ${
         stretch ? styles["stretched"] : ""
       }`}
+
+      style={{gap: `${gap}px`}}
     >
       {children}
     </div>

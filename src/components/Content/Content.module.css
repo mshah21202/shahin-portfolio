@@ -1,0 +1,5 @@
+.content {
+    width: 70%;
+    height: auto;
+    border-right: 2px solid var(--outline-variant);
+}
