@@ -12,16 +12,34 @@
     height: 4vh;
     border-radius: 20px;
     z-index: 1;
-    background-color: var(--on-background);
+    /* background-color: var(--on-background); */
+    background-color: var(--outline-variant);
+
 }
 
 .indicator.active {
-    background-color: var(--primary-container);
+    /* background-color: var(--primary-container); */
+    background-color: var(--primary);
+
 }
 
 .navigation .link {
     height: 4vh;
     line-height: 4vh;
+    width: 100%;
+}
+
+.navigation .link.active {
+    height: 4vh;
+    line-height: 4vh;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.navigation .link:hover {
+    /* color: var(--primary-container); */
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .progress {
@@ -30,11 +48,13 @@
     width: 10px;
     margin-top: 5%;
     margin-bottom: 5%;
-    background-color: var(--on-background);
+    background-color: var(--outline-variant);
 }
 
 .progress.active {
-    background-color: var(--primary-container);
+    /* background-color: var(--primary-container); */
+    background-color: var(--primary);
+
     width: 10px;
     transform-origin: 0% 0%;
     transition: all 0.3s ease

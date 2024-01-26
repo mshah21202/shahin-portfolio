@@ -4,15 +4,22 @@ import Column from '../Layout/Column/Column'
 import typography from '../../theme/typography.module.css'
 import Row from '../Layout/Row/Row'
 import { CrossAxisAlignment, MainAxisAlignment } from '../Layout/Layout';
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 
 
 const Navigation = ({items}) => {
     const [scrollTop, setScrollTop] = useState(0);
 
+    function goToSection(id) {
+        var section = document.getElementById(id);
+        var sectionY = section.getBoundingClientRect().top + window.scrollY - 150;
+
+        window.scrollTo({top: sectionY, behavior: 'smooth'});
+    }
+
     var itemsInDiv = Array(items)[0].map((value) => {
-        return <div className={`${styles.link} ${typography['title-medium']}`}>{value}</div>
+        return <div className={`${styles.link} ${typography['title-medium']}`} onClick={() => goToSection(value)}>{value}</div>
     });
     var indicators = [];
     itemsInDiv.forEach((value) => {
@@ -72,13 +79,16 @@ const Navigation = ({items}) => {
 
         // Get indicators
         var indicators = document.querySelectorAll(`div.${styles.indicator}`);
+        var itemsInDiv = document.querySelectorAll(`div.${styles.link}`);
         
         // Apply active to indicator if scrolled >= index*(100/(number of indicators))
         indicators.forEach((indicator, index) => {
             if (scrolled >= index*(100/(indicators.length-1))) {
                 indicator.classList.add(`${styles.active}`);
+                itemsInDiv[index].classList.add(`${styles.active}`);
             } else {
                 indicator.classList.remove(`${styles.active}`);
+                itemsInDiv[index].classList.remove(`${styles.active}`);
             }
         });
 
@@ -91,7 +101,7 @@ const Navigation = ({items}) => {
     
         // 
         return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+    });
 
     
     return (
