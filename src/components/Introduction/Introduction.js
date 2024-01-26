@@ -10,6 +10,7 @@ const Introduction = () => {
     downloading
     </span>)
 
+
     return (
     <div className={`${styles.introduction}`}>
         <Row>
@@ -27,7 +28,8 @@ const Introduction = () => {
                         </Column>
                 </Column>
             </div>
-            <div className={`${styles.right}`} style={{backgroundImage: `url(${image})`}}>
+            <div className={`${styles.right}`}>
+                <img src={image} alt='Personal Portrait' className={`${styles.pic}`}></img>
             </div>
         </Row>
     </div>
