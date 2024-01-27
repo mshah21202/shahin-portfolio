@@ -25,3 +25,7 @@
 .btn .title {
     padding: 0px 5px;
 }
+
+.btn:hover {
+    background-image: linear-gradient(var(--on-secondary-container) 0 0);
+}
