@@ -9,6 +9,7 @@
     border-radius: 12px;
     background: var(--primary);
     color: var(--on-primary);
+    border: none;
 }
 
 .btn.tonal {
@@ -22,10 +23,26 @@
     color: var(--primary);
 }
 
+.btn.text {
+    background: none;
+    color: var(--primary);
+}
+
 .btn .title {
     padding: 0px 5px;
+    line-height: 24px;
 }
 
 .btn:hover {
-    background-image: linear-gradient(var(--on-secondary-container) 0 0);
+    background-image: linear-gradient(var(--on-secondary-container-state) 0 0);
+}
+
+.btn.outline:hover {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
+}
+
+.btn.text:hover {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
 }

@@ -9,7 +9,7 @@ const Content = () => {
             <div style={{height: '200vh'}}></div>
             <div id="Experience">Experience</div>
             <div style={{height: '50vh'}}></div>
-            <div id="Resume">Resume</div>
+            <div id="Projects">Projects</div>
             <div style={{height: '150vh'}}></div>
             <div id="Services">Services</div>
             <div style={{height: '20vh'}}></div>

@@ -48,4 +48,5 @@
   --surface-container: rgb(237 239 228);
   --surface-container-high: rgb(231 233 223);
   --surface-container-highest: rgb(225 228 217);
+  --on-secondary-container-state: rgb(20 30 13/12%);
 }

@@ -8,8 +8,14 @@ import React, { useEffect, useState } from "react";
 
 
 
-const Navigation = ({items}) => {
+const Navigation = () => {
     const [scrollTop, setScrollTop] = useState(0);
+    const [sections, setSections] = useState(0);
+
+    // var sections = document.querySelectorAll(`div.${infoStyles.content} > div[id]`);
+
+    var items = Array.from(sections).map((section) => section.innerHTML);
+
 
     function goToSection(id) {
         var section = document.getElementById(id);
@@ -66,9 +72,8 @@ const Navigation = ({items}) => {
     const onScroll = () => {
         // Get sections element
         var sectionsDistance = [];
-        var sections = document.querySelectorAll(`div.${infoStyles.content} > div[id]`)
 
-        sections.forEach((section, index) => {
+        sections.forEach((section) => {
             sectionsDistance.push(getElemDistance(section) - 150);
         });
 
@@ -98,10 +103,12 @@ const Navigation = ({items}) => {
     useEffect(() => {
         // Fires when the document view has been scrolled
         window.addEventListener("scroll", onScroll);
-    
+        
+        setSections(document.querySelectorAll(`div.${infoStyles.content} > div[id]`));
+
         // 
         return () => window.removeEventListener("scroll", onScroll);
-    });
+    }, [onScroll, setSections]);
 
     
     return (

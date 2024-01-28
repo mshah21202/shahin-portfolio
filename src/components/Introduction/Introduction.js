@@ -23,8 +23,8 @@ const Introduction = () => {
                         <div className={`${styles.line}`}></div>
                         <div className={`${styles.subtitle} ${typography['headline-small']}`}>Software Engineer</div>
                         <Column gap={10}>
-                            <Button title={"Learn More"} style={'tonal'}></Button>
-                            <Button title={"Downlad CV"} style={'outline'} icon={downloadIcon}></Button>
+                            <Button title={"Learn More"} type={'tonal'}></Button>
+                            <Button title={"Downlad CV"} type={'outline'} icon={downloadIcon}></Button>
                         </Column>
                 </Column>
             </div>

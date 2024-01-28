@@ -1,12 +1,12 @@
 import styles from './Button.module.css';
 import typography from '../../theme/typography.module.css';
 
-const Button = ({title, style, purpose, icon}) => {
+const Button = ({title, type, purpose, icon}) => {
     return (
-        <div className={`${styles.btn} ${styles[`${style}`]} ${styles[`${purpose}`]} ${typography['label-large']}`}>
+        <button className={`${styles.btn} ${styles[`${type}`]} ${styles[`${purpose}`]} ${typography['label-large']}`}>
             {icon}
             <div className={`${styles.title}`}>{title}</div>
-        </div>
+        </button>
     );
 }
  
