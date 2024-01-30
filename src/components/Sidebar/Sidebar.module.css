@@ -1,17 +1,27 @@
 .sidebar {
-    position: sticky;
-    top: 0;
-    height: 90vh;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-right: 2px solid var(--outline-variant);
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  box-sizing: border-box;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-right: 2px solid var(--outline-variant);
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar-wrapper {
+    display: none;
+  }
 }
 
 .sidebar-wrapper {
-    position: relative;
-    top: 0;
-    width: 30%;
-    height: 100vh;
+  position: relative;
+  width: 30%;
+  height: 100vh;
 }

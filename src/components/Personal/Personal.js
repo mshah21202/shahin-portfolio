@@ -5,7 +5,6 @@ import image from '../../assets/personal_pic.png'
 import { CrossAxisAlignment, MainAxisAlignment } from '../Layout/Layout.js'
 
 const Personal = () => {
-    console.log(typography);
     return (
         <div className={`${styles.personal}`}>
             <Column mainAxisAlignment={MainAxisAlignment.center} crossAxisAlignment={CrossAxisAlignment.center}>

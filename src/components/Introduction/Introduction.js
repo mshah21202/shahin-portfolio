@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 import image from '../../assets/personal_pic.png'
 
 const Introduction = () => {
-    var downloadIcon = (<span class="material-symbols-outlined">
+    var downloadIcon = (<span className="material-symbols-outlined">
     downloading
     </span>)
 
