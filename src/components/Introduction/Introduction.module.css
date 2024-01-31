@@ -1,10 +1,17 @@
 .introduction {
+    display: flex;
+    align-items: center;
     width: 100%;
+    height: 100vh;
     padding-left: 3vw;
     padding-right: 3vw;
     padding-top: 20vh;
     border-bottom: 2px solid var(--outline-variant);
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
 }
 
 .left {
@@ -14,17 +21,16 @@
 
 .right {
     display: flex;
-    justify-content: center;
     width: 50%;
-    height: 400px;
+    height: 100%;
     overflow-x: visible;
     overflow-y: hidden;
 }
 
 .pic {
     position: relative;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     object-fit: cover;
     object-position: 50% 0%;
     overflow-x: visible;
@@ -39,4 +45,41 @@
     width: 50%;
     height: 2px;
     background-color: var(--primary);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .introduction {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        height: 93svh;
+        padding-top: 4svh;
+        padding-bottom: 4svh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .line {
+        width: 70%;
+    }
+
+    .pic {
+        width: 50vw;
+        height: 50vw;
+        background-color: var(--surface-variant);
+        border-radius: 999px;
+        object-fit: cover;
+        object-position: 50% -20%;
+    }
+
+    .right {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .left {
+        text-align: center;
+        width: 80%;
+    }
 }

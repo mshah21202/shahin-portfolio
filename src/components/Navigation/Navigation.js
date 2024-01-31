@@ -5,10 +5,16 @@ import Row from "../Layout/Row/Row";
 import { CrossAxisAlignment, MainAxisAlignment } from "../Layout/Layout";
 import React, { useEffect, useMemo, useState } from "react";
 
-const Navigation = ({ items }) => {
+const Navigation = ({ items, onNavigate }) => {
   const [scrollTop, setScrollTop] = useState(0);
 
   var itemsInDiv = useMemo(() => {
+    function goToSection(id) {
+      var section = document.getElementById(id);
+      var sectionY = section.getBoundingClientRect().top + window.scrollY - 150;
+      onNavigate();
+      window.scrollTo({ top: sectionY, behavior: "smooth" });
+    }
     return items !== undefined
       ? items.map((value, index) => {
           if (index === 0) {
@@ -34,7 +40,7 @@ const Navigation = ({ items }) => {
           }
         })
       : [];
-  }, [items]);
+  }, [items, onNavigate]);
 
   // console.log(itemsInDiv);
   var indicators = useMemo(() => {
@@ -56,12 +62,7 @@ const Navigation = ({ items }) => {
 
   // var sections = document.querySelectorAll(`div.${infoStyles.content} > div[id]`);
 
-  function goToSection(id) {
-    var section = document.getElementById(id);
-    var sectionY = section.getBoundingClientRect().top + window.scrollY - 150;
 
-    window.scrollTo({ top: sectionY, behavior: "smooth" });
-  }
 
   function calculatePercentage(distances, scroll, scrollMax) {
     let k = distances.length;
@@ -95,7 +96,7 @@ const Navigation = ({ items }) => {
     var location = 0;
     if (elem.offsetParent) {
       do {
-        location += elem.offsetTop;
+        location += elem.offsetTop - 20;
         elem = elem.offsetParent;
       } while (elem);
     }

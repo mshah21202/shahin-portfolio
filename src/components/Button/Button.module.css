@@ -35,10 +35,11 @@
 
 .btn:hover {
     background-image: linear-gradient(var(--on-secondary-container-state) 0 0);
+    cursor: pointer;
 }
 
 .btn.outline:hover {
-    background-color: var(--primary-container);
+    background-color: var(--primary-container-state);
     color: var(--on-primary-container);
 }
 

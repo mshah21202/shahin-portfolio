@@ -45,7 +45,7 @@
 .progress {
     position: absolute;
     height: 95%;
-    width: 0.7vw;
+    width: 3%;
     min-width: 5px;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -56,5 +56,5 @@
     /* background-color: var(--primary-container); */
     background-color: var(--primary);
     transform-origin: 0% 0%;
-    transition: all 0.3s ease
+    transition: all 0.2s ease
 }

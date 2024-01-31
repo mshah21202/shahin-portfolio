@@ -3,3 +3,40 @@
     height: auto;
     border-right: 2px solid var(--outline-variant);
 }
+
+.app-bar {
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .content {
+        width: 100svw;
+        border: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        width: 48px;
+    }
+
+    .app-bar {
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        height: 48px;
+        width: 100svw;
+        padding: 8px;
+        background-color: var(--background);
+        z-index: 5;
+    }
+
+    .menu-icon {
+        height: fit-content;
+    }
+}
