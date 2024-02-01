@@ -8,6 +8,10 @@
     display: none;
 }
 
+.app-bar.shadow {
+    box-shadow: var(--shadow-25) 0px -20px 40px 0px;
+}
+
 
 @media only screen and (max-width: 768px) {
     .content {

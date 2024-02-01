@@ -1,7 +1,27 @@
+import { useEffect } from "react";
 import Introduction from "../Introduction/Introduction";
 import styles from "./Content.module.css";
 
 const Content = ({ onToggleSidebar }) => {
+
+	const onScroll = () => {
+		const bar = document.querySelector(`div.${styles["app-bar"]}`);
+		console.log(`.${styles["app-bar"]}`);
+		if (bar !== null && window.scrollY > 0) {
+			bar.classList.add(`${styles.shadow}`);
+		} else if (bar !== null){
+			bar.classList.remove(`${styles.shadow}`);
+		}
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', onScroll);
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        };
+	});
+
 	var menuIcon = (
 		<span className={`material-symbols-outlined ${styles["menu-icon"]}`}>
 			menu

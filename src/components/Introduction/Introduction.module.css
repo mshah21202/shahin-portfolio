@@ -48,7 +48,7 @@ a {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .introduction {
         flex-direction: column-reverse;
         align-items: center;
@@ -82,5 +82,26 @@ a {
     .left {
         text-align: center;
         width: 80%;
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 601px) {
+    .introduction {
+        flex-direction: row;
+        padding-top: 4svh;
+        height: 90dvh;
+    }
+
+    .right {
+        justify-content: center;
+    }
+
+    .left {
+        text-align: center;
+    }
+
+    .pic {
+        background-color: transparent;
+        border-radius: 0px;
     }
 }
