@@ -1,0 +1,70 @@
+.areas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+@media only screen and (max-width: 601px) {
+    .areas-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+.knowledge {
+    width: 100%;
+    /* flex-basis: 45%; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.knowledge .title-percentage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-percentage .title {
+    color: var(--on-background);
+}
+
+.title-percentage .percentage {
+    color: var(--outline);
+}
+
+.progress {
+    position: relative;
+    width: 100%;
+    height: 3px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+}
+
+.progress .progress-bar.bg {
+    /* position: absolute; */
+    overflow: hidden;
+    background-color: var(--outline-variant);
+}
+
+.progress .progress-bar.active {
+    position: absolute;
+    background-color: var(--primary);
+    transform-origin: left;
+    transition: all 0.7s ease-in;
+}
+
+.subtitle {
+    color: var(--on-surface-variant);
+}

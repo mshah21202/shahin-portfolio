@@ -17,7 +17,7 @@ const Introduction = () => {
     </span>);
 
     function isMobilePhone() {
-        return windowSize[0] <= 768;
+        return windowSize[0] <= 992;
     }
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const Introduction = () => {
                 <Column gap={isMobilePhone() ? 15 : 20} mainAxisAlignment={isMobilePhone() ? MainAxisAlignment.center : null} crossAxisAlignment={isMobilePhone() ? CrossAxisAlignment.center: null}>
                     <Column gap={5} crossAxisAlignment={isMobilePhone() ? CrossAxisAlignment.center: null}>
                         <div className={`${typography['headline-small']} ${styles.subtitle}`}>Hi, I'm</div>
-                        <div className={`${typography[isMobilePhone() ? 'display-medium' : 'display-large']}`}>Mohamad Shahin</div>
+                        <div className={`${typography[isMobilePhone() ? 'display-medium' : 'display-large']} ${styles.title}`}>Mohamad Shahin</div>
                     </Column>
                     <div className={`${styles.line}`}></div>
                     <div className={`${styles.subtitle} ${typography[isMobilePhone() ? 'body-large' : 'headline-small']}`}>Software Engineer</div>

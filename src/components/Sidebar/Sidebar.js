@@ -1,5 +1,5 @@
 import styles from "./Sidebar.module.css";
-import contentStyles from "../Content/Content.module.css";
+import sectionStyles from "../Section/Section.module.css";
 import Column from "../Layout/Column/Column.js";
 import Personal from "../Personal/Personal.js";
 import Navigation from "../Navigation/Navigation.js";
@@ -12,7 +12,7 @@ const Sidebar = ({ isVisible, isMobile, onToggleSidebar }) => {
 
 	function getSections() {
 		var sectionNodes = document.querySelectorAll(
-			`div.${contentStyles.content} > div[id]`
+			`div.${sectionStyles.section} > div.${sectionStyles.title} > div[id]`
 		);
 		return Array.from(sectionNodes);
 	}

@@ -8,6 +8,7 @@
     padding-top: 20vh;
     border-bottom: 2px solid var(--outline-variant);
     box-sizing: border-box;
+    color: var(--on-background);
 }
 
 a {
@@ -36,6 +37,11 @@ a {
     overflow-x: visible;
     overflow-y: hidden;
 }
+
+.title {
+    color: var(--on-background);
+}
+
 
 .subtitle {
     color: var(--primary);
@@ -85,7 +91,24 @@ a {
     }
 }
 
-@media only screen and (max-width: 992px) and (min-width: 601px) {
+@media only screen and (max-width: 992px) and (min-width: 601px) and (orientation: portrait) {
+    .introduction {
+        height: 40dvh;
+        padding-top: 4dvh;
+        padding-left: 10dvw;
+        padding-right: 10dvw;
+    }
+
+    .right {
+        justify-content: center;
+    }
+
+    .left {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 601px)  and (orientation: landscape) {
     .introduction {
         flex-direction: row;
         padding-top: 4svh;

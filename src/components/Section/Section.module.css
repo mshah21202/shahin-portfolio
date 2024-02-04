@@ -1,0 +1,25 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 22px;
+    color: var(--on-background);
+    border-bottom: 2px solid var(--outline-variant);
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 5px;
+}
+
+.title div {
+    color: var(--on-background);
+}

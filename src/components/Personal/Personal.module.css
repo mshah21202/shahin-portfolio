@@ -18,7 +18,17 @@
     object-position: 50% -20%;
 }
 
+.title {
+    color: var(--on-background);
+}
+
 @media only screen and (max-width: 992px) and (min-width: 601px) {
+    .personal {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 580px) {
     .personal {
         display: none;
     }

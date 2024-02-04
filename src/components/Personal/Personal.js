@@ -11,7 +11,7 @@ const Personal = () => {
                 <div className={`${styles['personal-pic-container']}`}>
                     <img src={image} alt='Personal Portrait' className={`${styles['personal-pic']}`} />
                 </div>
-                <h3 className={`${typography['headline-large']}`}>Mohmad Shahin</h3>
+                <h3 className={`${typography['headline-large']} ${styles.title}`}>Mohmad Shahin</h3>
             </Column>
         </div>
     );
