@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     padding-left: 3vw;
     padding-right: 3vw;
-    padding-top: 20vh;
+    padding-top: 10vh;
     border-bottom: 2px solid var(--outline-variant);
     box-sizing: border-box;
     color: var(--on-background);
@@ -30,8 +30,8 @@ a {
 
 .pic {
     position: relative;
-    /* width: 100%; */
-    /* height: 100%; */
+    width: 100%;
+    /* height: 80%; */
     object-fit: cover;
     object-position: 50% 0%;
     overflow-x: visible;
@@ -82,7 +82,7 @@ a {
     .right {
         width: 50vw;
         height: 50vw;
-        margin-bottom: 5vh;
+        margin-bottom: 4dvh;
     }
 
     .left {
