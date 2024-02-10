@@ -6,14 +6,12 @@ import Knowledge from "./Knowledge/Knowledge";
 const About = () => {
 	return (
 		<div className={`${styles.about}`}>
-			<div className={`${styles.subtitle} ${typography['body-small']}`}>
-				Quis ultricies euismod et felis eu. Pulvinar amet cras eu amet magna
-				neque euismod in. Massa lectus tortor sit et euismod scelerisque mauris
-				neque. Lectus nibh bibendum enim quam. Est nec duis pretium diam et
-				cras.
+			<div className={`${styles.subtitle} ${typography['body-medium']}`}>
+				Hi, I'm Mohamad. I am a software engineer experienced in building mobile applications and websites for all purposes.
+				 I am always looking for a challenging project, so if you have a challenge for me let's talk!
 			</div>
 			<Areas>
-				<Knowledge title="Mobile Development" percentage={0.89} />
+				<Knowledge title="Mobile App Development" percentage={0.89} />
 				<Knowledge title="UI/UX Design" percentage={0.78} />
 				<Knowledge title="Backend Development" percentage={0.64} />
 			</Areas>

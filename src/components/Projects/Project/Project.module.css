@@ -1,0 +1,65 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: var(--surface-variant);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.title-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: var(--on-surface-variant);
+}
+
+.view {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.view > div {
+    color: var(--primary);
+}
+
+.view > span {
+    color: var(--primary);
+}
+
+.view:hover {
+    background-image: linear-gradient(var(--on-secondary-container-state) 0 0);
+    cursor: pointer;
+}
+
+.description {
+    color: var(--on-surface-variant);
+    height: 100%;
+}
+
+.dot {
+    width: 17px;
+    height: 17px;
+    border-radius: 9px;
+    background-color: var(--primary);
+}
+
+.tag {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 5px 10px;
+    width: fit-content;
+    background-color: var(--tertiary);
+    color: var(--on-tertiary);
+    border-radius: 10px;
+}

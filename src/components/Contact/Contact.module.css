@@ -1,0 +1,51 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px;
+    padding-bottom: 50px;
+}
+
+.info {
+    display: flex;
+    height: 44px;
+    gap: 10px;
+}
+.info > input {
+    background-color: var(--surface-variant);
+    color: var(--on-surface-variant);
+    font-size: 14px;
+    border: 0px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 601px) {
+    .info {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info > input {
+        width: inherit;
+    }
+}
+
+
+
+.contact > textarea {
+    background-color: var(--surface-variant);
+    color: var(--on-surface-variant);
+    font-size: 14px;
+    border: 0px;
+    border-radius: 5px;
+    resize: none;
+    padding: 10px;
+    height: 190px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}

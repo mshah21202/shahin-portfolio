@@ -2,8 +2,11 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 25px 22px;
+    /* padding: 25px 22px; */
     color: var(--on-background);
+}
+
+.section.bottom-border {
     border-bottom: 2px solid var(--outline-variant);
 }
 
@@ -17,6 +20,8 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
+    padding: 0px 22px;
+    padding-top: 25px;
     gap: 5px;
 }
 

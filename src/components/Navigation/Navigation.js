@@ -84,6 +84,7 @@ const Navigation = ({ items, onNavigate }) => {
         let stepPercentage =
           percentagePerStep *
           (i + (scroll - distances[i]) / (distances[i + 1] - distances[i]));
+          console.log(stepPercentage);
         return stepPercentage;
       }
     }
@@ -139,7 +140,7 @@ const Navigation = ({ items, onNavigate }) => {
       }
     });
 
-    setScrollTop(scrolled);
+    setScrollTop(scrolled.toFixed(2));
   };
 
   useEffect(() => {

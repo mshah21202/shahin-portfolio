@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Content from "./components/Content/Content";
 import FAB from "./components/FAB/FAB";
 import { ThemeContext } from './theme/ThemeProvider';
+import SnackbarProvider from 'react-simple-snackbar/dist';
 
 function App() {
 	const [showSidebar, setShowSidebar] = useState(false);
@@ -41,17 +42,19 @@ function App() {
 	});
 
 	return (
-		<div className={`${styles.main}`}>
-			<FAB icon={<span className="material-symbols-outlined">{theme === 'light' ? 'dark_mode' : 'light_mode'}</span>} onClick={toggleTheme}/>
-			<Row>
-				<Sidebar
-					isVisible={showSidebar}
-					isMobile={isMobilePhone()}
-					onToggleSidebar={toggleSidebar}
-				/>
-				<Content onToggleSidebar={toggleSidebar} />
-			</Row>
-		</div>
+		<SnackbarProvider>
+			<div className={`${styles.main}`}>
+				<FAB icon={<span className="material-symbols-outlined">{theme === 'light' ? 'dark_mode' : 'light_mode'}</span>} onClick={toggleTheme} />
+				<Row>
+					<Sidebar
+						isVisible={showSidebar}
+						isMobile={isMobilePhone()}
+						onToggleSidebar={toggleSidebar}
+					/>
+					<Content onToggleSidebar={toggleSidebar} />
+				</Row>
+			</div>
+		</SnackbarProvider>
 	);
 }
 

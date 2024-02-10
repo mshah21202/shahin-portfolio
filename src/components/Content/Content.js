@@ -3,12 +3,14 @@ import { useEffect } from "react";
 import Introduction from "../Introduction/Introduction";
 import Section from "../Section/Section";
 import styles from "./Content.module.css";
+import Experience from "../Experiences/Experiences";
+import Projects from "../Projects/Projects";
+import Contact from "../Contact/Contact";
 
 const Content = ({ onToggleSidebar }) => {
 
 	const onScroll = () => {
 		const bar = document.querySelector(`div.${styles["app-bar"]}`);
-		console.log(`.${styles["app-bar"]}`);
 		if (bar !== null && window.scrollY > 0) {
 			bar.classList.add(`${styles.shadow}`);
 		} else if (bar !== null){
@@ -39,10 +41,9 @@ const Content = ({ onToggleSidebar }) => {
 			</div>
 			<Introduction />
 			<Section title='About' ><About /></Section>
-			<Section title='Experience' ><About /></Section>
-			<Section title='Projects' ><About /></Section>
-			<Section title='Services' ><About /></Section>
-			<Section title='Contact' ><About /></Section>
+			<Section title='Experience' bottomBorder={false}><Experience /></Section>
+			<Section title='Projects' ><Projects /></Section>
+			<Section title='Contact' ><Contact /></Section>
 		</div>
 	);
 };
