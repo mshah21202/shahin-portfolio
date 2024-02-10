@@ -7,7 +7,7 @@ const Projects = () => {
             title='Portfolio Website'
             description='A personal portfolio website to showcase all professional work'
             tag='Website'
-            url=''
+            url='https://github.com/mshah21202/shahin-portfolio'
         />
         <Project 
         title='Ehjez'
