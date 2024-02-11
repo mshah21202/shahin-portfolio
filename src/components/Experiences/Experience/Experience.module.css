@@ -60,13 +60,20 @@
 .content {
     margin-top: -150%;
     transition: all 0.3s ease-in-out;
+}
 
-
+.content li {
+    font-size: var(--body-large-font-size);
+    font-family: var(--body-large-font-family-name);
+    line-height: var(--body-large-height);
+    letter-spacing: var(--body-large-tracking);
 }
 
 .content > ul {
     margin-block: 0px;
-    padding: 0px;
+    /* padding: 0px; */
+    padding-inline-start: 20px;
+
 }
 
 .content > ul > ul{
