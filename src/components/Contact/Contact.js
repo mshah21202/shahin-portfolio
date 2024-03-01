@@ -11,6 +11,7 @@ const Contact = () => {
 
     const submitMessage = async (data) => {
         try {
+            data['datetime'] = new Date();
             await addDoc(collection(db, 'messages'), data);
             openSnackbar('Message Sent successfully', 3000);
 

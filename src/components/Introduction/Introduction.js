@@ -35,14 +35,14 @@ const Introduction = () => {
     return (
         <div className={`${styles.introduction}`}>
             <div className={`${styles.left}`}>
-                <Column gap={isMobilePhone() ? 15 : 20} mainAxisAlignment={isMobilePhone() ? MainAxisAlignment.center : null} crossAxisAlignment={isMobilePhone() ? CrossAxisAlignment.center: null}>
-                    <Column gap={5} crossAxisAlignment={isMobilePhone() ? CrossAxisAlignment.center: null}>
+                <Column gap={isMobilePhone() ? 15 : 20} mainAxisAlignment={isMobilePhone() ? MainAxisAlignment.center : null} crossAxisAlignment={isMobilePhone() ? CrossAxisAlignment.center : null}>
+                    <Column gap={5} crossAxisAlignment={isMobilePhone() ? CrossAxisAlignment.center : null}>
                         <div className={`${typography['headline-small']} ${styles.subtitle}`}>Hi, I'm</div>
-                        <div className={`${typography[isMobilePhone() ? 'display-medium' : 'display-large']} ${styles.title}`}>Mohamad Shahin</div>
+                        <h1 className={`${typography[isMobilePhone() ? 'display-medium' : 'display-large']} ${styles.title}`}>Mohamad Shahin</h1>
                     </Column>
                     <div className={`${styles.line}`}></div>
-                    <div className={`${styles.subtitle} ${typography[isMobilePhone() ? 'body-large' : 'headline-small']}`}>Software Engineer</div>
-                    <Column gap={10} crossAxisAlignment={isMobilePhone() ? CrossAxisAlignment.center: null}>
+                    <h2 className={`${styles.subtitle} ${typography[isMobilePhone() ? 'body-large' : 'headline-small']}`}>Software Engineer</h2>
+                    <Column gap={10} crossAxisAlignment={isMobilePhone() ? CrossAxisAlignment.center : null}>
                         {/* <Button title={"Learn More"} type={'tonal'}></Button> */}
                         <a href='https://docs.google.com/uc?id=1nf699ydrVMOJwnZjAfn95AMVZIKTNenh&export=download'><Button title={"Download CV"} type={'outline'} icon={downloadIcon}></Button></a>
                     </Column>
